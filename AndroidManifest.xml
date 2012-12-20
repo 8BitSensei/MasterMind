@@ -1,0 +1,127 @@
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mastermind"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@drawable/alt_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".home"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.HOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".splash_launcher"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".instruction"
+            android:label="@string/title_activity_main" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.INSTRUCT" />
+				 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".code"
+            android:label="@string/title_activity_main" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.CODE" />
+				 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".check"
+            android:label="@string/title_activity_main" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.CHECK" />
+				 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".floor1"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.FLOOR1" />
+				 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".guess"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.Guess"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+          </activity>
+        <activity
+            android:name=".guess_database"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.Guess_database"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+          </activity>
+        <activity
+            android:name=".Medals"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.medals"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+          </activity>
+		<activity
+			android:name=".Level_select"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.level_select"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+          </activity>
+        <activity
+			android:name=".code_harderx1"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.code_harderx1"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+          </activity>
+            <activity
+			android:name=".Guess_harderx1"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.guess_harderx1"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+          </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:summary="@string/instruction2" android:key="@android:string/cut" android:title="@string/hello_world"></PreferenceScreen>
+    
+
+</PreferenceScreen>

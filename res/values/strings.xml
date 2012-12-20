@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">Master mind</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="instruction1">In Master mind, the computer generates a random code, you must crack this code! </string>
+    <string name="instruction2">To help you win you have the finest tools at your disposal giving you feedback on every move you make;</string>
+    <string name="instruction3">A grey feedback circle with an X means that the colour you have picked does not appear anywhere in the code.</string>
+    <string name="instruction4">A white circle means that the colour you have picked appears somewhere in the code, but not where you guessed.</string>
+    <string name="instruction5">And a green circle with a tick means you have picked the right number and position.</string>
+    <string name="instruction6 ">get all of them right and you win!</string>
+    <string name="username">Username</string>
+    <string name="password">password</string>
+    <string name="medal_virgin">&quot;Yoouw won the virgin medal!&quot;</string>
+    <string name="medal_quick_grip">You won the medal Quick Grip!</string>
+
+</resources>
