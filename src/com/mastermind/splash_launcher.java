@@ -22,7 +22,7 @@ public class splash_launcher extends Activity {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} finally {
-					Intent openMainActivity = new Intent(a, home.class);
+					Intent openMainActivity = new Intent(a, GLxmlTest.class);
 					startActivity(openMainActivity);
 
 				}

@@ -2,22 +2,38 @@
     package="com.mastermind"
     android:versionCode="1"
     android:versionName="1.0" >
+    
+     
+       
 
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
+  
     <application
-        android:icon="@drawable/alt_launcher"
+    
+      android:icon="@drawable/alt_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name=".home"
+        android:theme="@style/AppTheme"
+         >
+         
+       
+         <activity
+            android:name=".GLxmlTest"
+            android:label="@string/title_activity_main"
+          >
+            <intent-filter>
+                <action android:name="android.intent.action.GLXMLTEST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".Puzzle2"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait" >
             <intent-filter>
-                <action android:name="android.intent.action.HOME" />
+                <action android:name="android.intent.action.PUZZLE2" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -59,15 +75,7 @@
 				 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".floor1"
-            android:label="@string/title_activity_main"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.FLOOR1" />
-				 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+      
         <activity
             android:name=".guess"
             android:label="@string/title_activity_main"
@@ -113,6 +121,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
           </activity>
+           <activity
+			android:name=".check_harderx1"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.check_harderx1"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+          </activity>
             <activity
 			android:name=".Guess_harderx1"
             android:label="@string/title_activity_main"
@@ -122,6 +139,34 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
           </activity>
+           <activity
+            android:name=".GLCube"
+            android:label="@string/title_activity_main" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.GLCUBE" />
+				 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".GLCubeRenderer"
+            android:label="@string/title_activity_main" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.GLCUBERENDERER" />
+				 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".GLCubeEx"
+            android:label="@string/title_activity_main" 
+            
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.GLCUBEEX" />
+				 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

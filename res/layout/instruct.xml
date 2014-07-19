@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background2"
@@ -20,7 +21,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="24dp"
-        android:text="To hep you with this, each time you make a guess, the computer gives you feedback about the guess you&apos;ve made:"
+        android:text="To help you with this, each time you make a guess, the computer gives you feedback about the guess you&apos;ve made:"
         android:textColor="#ffffff" />
 
     <TextView
@@ -40,7 +41,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView2"
         android:layout_marginTop="16dp"
-        android:text="A S means that the number you&apos;ve picked appears some where in the code, but not where you guessed."
+        android:text="An S means that the number you&apos;ve picked appears some where in the code, but not where you guessed."
         android:textColor="#ffffff" />
 
     <TextView
@@ -50,7 +51,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView3"
         android:layout_marginTop="19dp"
-        android:text="And a V means you&apos;ve got all the numbers in the right position."
+        android:text="And a V means you&apos;ve got the numbers in the right position."
         android:textColor="#ffffff" />
 
     <TextView
