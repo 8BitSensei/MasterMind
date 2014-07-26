@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 
 public class GLxmlTest extends Activity {
 
-	public boolean onTouchEvent(MotionEvent event) {
+/*	public boolean onTouchEvent(MotionEvent event) {
 
 		float touchedX = 0;
 		float touchedY = 0;
@@ -31,7 +31,7 @@ public class GLxmlTest extends Activity {
 
 		}
 		return true;
-	}
+	}*/
 
 	static MediaPlayer mediaPlayer; 	
 	public void onCreate(Bundle savedInstanceState) {
@@ -66,7 +66,7 @@ public class GLxmlTest extends Activity {
 		paramsd2.leftMargin = 400;
 		paramsd2.topMargin = 200;
 
-		l.setRenderer(new GLCubeRenderer());
+		//l.setRenderer(new GLCubeRenderer());
 		
 		btn1.setOnClickListener(new View.OnClickListener() {
 

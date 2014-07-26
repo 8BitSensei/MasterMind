@@ -145,13 +145,13 @@ public class Level_select extends Activity {
 			}
 		});
 
-		home_button.setOnClickListener(new View.OnClickListener() {
+		/*home_button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				Intent openHome = new Intent(h, GLCubeEx.class);
 				startActivity(openHome);
 
 			}
-		});
+		});*/
 
 	}
 
