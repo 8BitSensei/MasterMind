@@ -47,7 +47,7 @@ public class check extends Activity {
 	int guess_six = 0;
 
 	@TargetApi(9)
-	public void onCreate(Bundle savedInstanceState) {
+	public check(Bundle savedInstanceState) {
 
 		d = this;
 
@@ -282,6 +282,8 @@ public class check extends Activity {
 			text1.setText(Arrays.toString(intArray));
 			
 		}
+		
+		updateList();
 	}
 
 	public void updateList() {
