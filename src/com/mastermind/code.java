@@ -2,6 +2,8 @@ package com.mastermind;
 
 import java.util.ArrayList;
 
+import com.mastermind.Guess.GuessStatus;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -212,7 +214,59 @@ public class code extends Activity {
 			public void onClick(View v) {
 				 check originOne = new check(savedInstanceState);
 				 
-				// originOne.
+				 GuessStatus[] arrayResults = originOne.updateList();
+				 
+				 if(arrayResults[0] == GuessStatus.V)
+				 {
+					 text1.setText("X"); 
+				 }
+				 if(arrayResults[0] == GuessStatus.S)
+				 {
+					 text1.setText("S");
+				 }
+				 if(arrayResults[0] == GuessStatus.X)
+				 {
+					 text1.setText("V");
+				 }
+				 
+				 if(arrayResults[1] == GuessStatus.V)
+				 {
+					 text2.setText("X");
+				 }
+				 if(arrayResults[1] == GuessStatus.S)
+				 {
+					 text2.setText("S");
+				 }
+				 if(arrayResults[1] == GuessStatus.X)
+				 {
+					 text2.setText("V");
+				 }
+				 
+				 if(arrayResults[2] == GuessStatus.V)
+				 {
+					 text3.setText("X");
+				 }
+				 if(arrayResults[2] == GuessStatus.S)
+				 {
+					 text3.setText("S");
+				 }
+				 if(arrayResults[2] == GuessStatus.X)
+				 {
+					 text3.setText("V");
+				 }
+				 
+				 if(arrayResults[3] == GuessStatus.V)
+				 {
+					 text4.setText("X");
+				 }
+				 if(arrayResults[3] == GuessStatus.S)
+				 {
+					 text4.setText("S");
+				 }
+				 if(arrayResults[3] == GuessStatus.X)
+				 {
+					 text4.setText("V");
+				 }
 
 			}
 		});
