@@ -3,8 +3,8 @@ MASTERMIND
 
 A small game for Android devices
 
-The games current working title is either Mystery or MasterMind, it is an old project I'm recovering at it's 
-had multiple working titles in that time.
+The games current working title is either Mystery or MasterMind, it is an old project and I'm recovering it 
+right now so it's had multiple working titles in that time.
 
 HOW TO PLAY
 ============
