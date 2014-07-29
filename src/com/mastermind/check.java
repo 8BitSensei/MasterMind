@@ -27,6 +27,7 @@ public class check extends Activity {
 	public Context d;
 
 	public ArrayList<Guess> guess_list;
+	int[] results_list = new int[3];
 	Guess guess = new Guess();
 	public static int fudge;
 
@@ -45,15 +46,20 @@ public class check extends Activity {
 	int guess_four = 0;
 	int guess_five = 0;
 	int guess_six = 0;
+	
+	public check()
+	{
+		
+	}
 
 	@TargetApi(9)
 	public void onCreate(Bundle savedInstanceState) {
 
 		d = this;
-
+		//c1  = 0;
 		turn_counter++;
 
-		setContentView(R.layout.check);
+		//setContentView(R.layout.check);
 
 		super.onCreate(savedInstanceState);
 
@@ -67,6 +73,7 @@ public class check extends Activity {
 		final TextView guess_positions;
 
 		guess_list = (ArrayList<Guess>) getIntent().getExtras().get("guesses");
+		int[] results_list = {0,0,0,0};
 		Log.e("TEST", "" + guess_list.size());
 		updateList();
 
@@ -140,7 +147,7 @@ public class check extends Activity {
 		if (Arrays.asList(home_list).contains(guess_list[0])) {
 			if (code.int1 == Level_select.value1) {
 				X1.setText("V");
-
+				results_list[0] = 2;
 				guess.c1 = GuessStatus.V;
 			}
 
@@ -148,12 +155,14 @@ public class check extends Activity {
 
 				X1.setText("S");
 				guess.c1 = GuessStatus.S;
+				results_list[0] = 1;
 
 			}
 		} else {
 
 			X1.setText("X");
 			guess.c1 = GuessStatus.X;
+			results_list[0] = 0;
 
 		}
 
@@ -162,18 +171,21 @@ public class check extends Activity {
 				X2.setText("V");
 
 				guess.c2 = GuessStatus.V;
+				results_list[1] = 2;
 			}
 
 			else {
 
 				X2.setText("S");
 				guess.c2 = GuessStatus.S;
+				results_list[1] = 1;
 
 			}
 		} else {
 
 			X2.setText("X");
 			guess.c2 = GuessStatus.X;
+			results_list[1] = 0;
 
 		}
 
@@ -182,18 +194,21 @@ public class check extends Activity {
 				X3.setText("V");
 
 				guess.c3 = GuessStatus.V;
+				results_list[2] = 2;
 			}
 
 			else {
 
 				X3.setText("S");
 				guess.c3 = GuessStatus.S;
+				results_list[2] = 1;
 
 			}
 		} else {
 
 			X3.setText("X");
 			guess.c3 = GuessStatus.X;
+			results_list[2] = 0;
 
 		}
 
@@ -202,18 +217,21 @@ public class check extends Activity {
 				X4.setText("V");
 
 				guess.c4 = GuessStatus.V;
+				results_list[3] = 2;
 			}
 
 			else {
 
 				X4.setText("S");
 				guess.c4 = GuessStatus.S;
+				results_list[3] = 1;
 
 			}
 		} else {
 
 			X4.setText("X");
 			guess.c4 = GuessStatus.X;
+			results_list[3] = 0;
 
 		}
 		// ------------------------------------------------------------------------------------------
@@ -295,5 +313,10 @@ public class check extends Activity {
 			((TextView) stub.findViewById(R.id.guess_positions)).setText(g.c1 + "," + g.c2 + "," + g.c3 + "," + g.c4.toString());
 			((ViewGroup) findViewById(R.id.scroll_layout)).addView(stub);
 		}
+	}
+	
+	public int[] getResults()
+	{
+		return results_list;
 	}
 }

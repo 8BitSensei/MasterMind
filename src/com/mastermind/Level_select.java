@@ -50,7 +50,7 @@ public class Level_select extends Activity {
 			level1Score = 6;
 		}
 
-		//Initialising buttons and contnet view
+		//Initialising buttons and content view
 		setContentView(R.layout.level_select);
 		one = (Button) findViewById(R.id.level_one);
 		two = (Button) findViewById(R.id.level_two);
@@ -82,7 +82,7 @@ public class Level_select extends Activity {
 		one.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				// home.adventure_time = 1;
-				Intent openLevel1 = new Intent(h, GLxmlTest.class);
+				Intent openLevel1 = new Intent(h, code.class);
 
 				// -------------------------------------------------------------------------------------
 				// random number generation for the code.class

@@ -210,17 +210,12 @@ public class code extends Activity {
 
 		check_button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				Intent openCheck = new Intent(c, check.class);
-				openCheck.putExtra("intArray", intArray);
-				openCheck.putExtra("int1", int1);
-				openCheck.putExtra("int2", int2);
-				openCheck.putExtra("int3", int3);
-				openCheck.putExtra("int4", int4);
-				openCheck.putExtra("guesses", guesses);
-				// Guess_database.guess_counter++;
-				database++;
-				check.fudge++;
-				startActivityForResult(openCheck, 1234);
+				
+				check checkOne = new check();
+				
+				checkOne.getResults();
+				
+				
 
 			}
 		});
