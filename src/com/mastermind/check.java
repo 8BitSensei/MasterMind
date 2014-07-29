@@ -53,7 +53,7 @@ public class check extends Activity {
 	}
 
 	@TargetApi(9)
-	public void onCreate(Bundle savedInstanceState) {
+	public check(Bundle savedInstanceState) {
 
 		d = this;
 		//c1  = 0;
@@ -300,19 +300,25 @@ public class check extends Activity {
 			text1.setText(Arrays.toString(intArray));
 			
 		}
+		
+		updateList();
 	}
 
-	public void updateList() {
-		LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	public GuessStatus[] updateList() {
+		//LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-		for (Guess g : guess_list) {
+		/*for (Guess g : guess_list) {
 
 			View stub = inflater.inflate(R.layout.guess_stub, null);
 
 			((TextView) stub.findViewById(R.id.guess)).setText(g.v1 + ", " + g.v2 + ", " + g.v3 + "," + g.v4);
 			((TextView) stub.findViewById(R.id.guess_positions)).setText(g.c1 + "," + g.c2 + "," + g.c3 + "," + g.c4.toString());
 			((ViewGroup) findViewById(R.id.scroll_layout)).addView(stub);
-		}
+		}*/
+		
+		GuessStatus[] arrayResults = { guess.c1, guess.c2, guess.c3, guess.c4 };
+		
+		return 	arrayResults;
 	}
 	
 	public int[] getResults()

@@ -105,7 +105,7 @@ public class Level_select extends Activity {
 			}
 		});
 
-		two.setOnClickListener(new View.OnClickListener() {
+		/*two.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				// home.adventure_time = 2;
 				Intent openLevel2 = new Intent(h, Puzzle2.class);
@@ -133,7 +133,7 @@ public class Level_select extends Activity {
 				startActivity(openLevel2);
 
 			}
-		});
+		});*/
 
 		three.setOnClickListener(new View.OnClickListener() {
 
@@ -145,13 +145,13 @@ public class Level_select extends Activity {
 			}
 		});
 
-		home_button.setOnClickListener(new View.OnClickListener() {
+		/*home_button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				Intent openHome = new Intent(h, GLCubeEx.class);
 				startActivity(openHome);
 
 			}
-		});
+		});*/
 
 	}
 

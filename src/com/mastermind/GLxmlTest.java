@@ -14,6 +14,9 @@ import android.widget.RelativeLayout;
 public class GLxmlTest extends Activity {
 
 	/*public boolean onTouchEvent(MotionEvent event) {
+=======
+/*	public boolean onTouchEvent(MotionEvent event) {
+>>>>>>> 28afe21f18f75e388bba4bcfd848449977446203
 
 		float touchedX = 0;
 		float touchedY = 0;
