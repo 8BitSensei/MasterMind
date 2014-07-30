@@ -278,12 +278,7 @@ public class code extends Activity {
 			}
 		});
 
-		home.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				Intent openHome = new Intent(c, Level_select.class);
-				startActivity(openHome);
-			}
-		});
+	
 	}
 
 	@Override
