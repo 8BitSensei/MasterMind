@@ -6,18 +6,11 @@ import java.util.Arrays;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -46,22 +39,17 @@ public class check extends Activity {
 	int guess_four = 0;
 	int guess_five = 0;
 	int guess_six = 0;
-	
-	public check()
-	{
-		
-	}
 
 	@TargetApi(9)
-	public check(Bundle savedInstanceState) {
+	public check() {
 
 		d = this;
-		//c1  = 0;
+		// c1 = 0;
 		turn_counter++;
 
-		//setContentView(R.layout.check);
+		// setContentView(R.layout.check);
 
-		super.onCreate(savedInstanceState);
+		// super.onCreate(savedInstanceState);
 
 		final Button test;
 		final TextView text1;
@@ -73,7 +61,7 @@ public class check extends Activity {
 		final TextView guess_positions;
 
 		guess_list = (ArrayList<Guess>) getIntent().getExtras().get("guesses");
-		int[] results_list = {0,0,0,0};
+		int[] results_list = { 0, 0, 0, 0 };
 		Log.e("TEST", "" + guess_list.size());
 		updateList();
 
@@ -82,9 +70,9 @@ public class check extends Activity {
 		guess.v3 = code.int3;
 		guess.v4 = code.int4;
 
-		test = (Button) findViewById(R.id.try_again);
-		
-		test.setOnClickListener(new View.OnClickListener() {
+		// test = (Button) findViewById(R.id.try_again);
+
+		/*test.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -97,31 +85,37 @@ public class check extends Activity {
 				startActivity(openCode);
 
 			}
-		});
+		});*/
 		// home.adventure_time = 1;
-		text1 = (TextView) findViewById(R.id.text);
+	//	text1 = (TextView) findViewById(R.id.text);
 
-		X1 = (TextView) findViewById(R.id.X1);
-		X2 = (TextView) findViewById(R.id.X2);
-		X3 = (TextView) findViewById(R.id.X3);
-		X4 = (TextView) findViewById(R.id.X4);
-		turn = (TextView) findViewById(R.id.turns);
+	//	X1 = (TextView) findViewById(R.id.X1);
+	//	X2 = (TextView) findViewById(R.id.X2);
+	//  X3 = (TextView) findViewById(R.id.X3);
+	//	X4 = (TextView) findViewById(R.id.X4);
+	//	turn = (TextView) findViewById(R.id.turns);
 		guess_positions = (TextView) findViewById(R.id.guess_positions);
 
 		final int[] intArray = getIntent().getIntArrayExtra("intArray");
 
 		Integer[] guess_list = { guess.v1, guess.v2, guess.v3, guess.v4 };
-		Integer[] home_list = { Level_select.value1, Level_select.value2, Level_select.value3, Level_select.value4 };
+		Integer[] home_list = { Level_select.value1, Level_select.value2,
+				Level_select.value3, Level_select.value4 };
 
-		turn.setText("Turns taken: " + turn_counter + "/7");
+	//	turn.setText("Turns taken: " + turn_counter + "/7");
 
 		// ----------------------------------------------------------------------------
 		// checking the results - START - LOGGING -
 		// ----------------------------------------------------------------------------
 
-		Log.e("TEST", guess_list[0] + " " + guess_list[1] + " " + guess_list[2] + " " + guess_list[3]);
-		Log.e("TEST", Level_select.value1 + " " + Level_select.value2 + " " + Level_select.value3 + " " + Level_select.value4);
-		Log.e("what_where" + one + " " + two + " " + three + " " + four + " " + five + " " + six + ", " + guess_one + " " + guess_two + " " + guess_three + " " + guess_four + " " + guess_five + " " + guess_six, null, null);
+		Log.e("TEST", guess_list[0] + " " + guess_list[1] + " " + guess_list[2]
+				+ " " + guess_list[3]);
+		Log.e("TEST", Level_select.value1 + " " + Level_select.value2 + " "
+				+ Level_select.value3 + " " + Level_select.value4);
+		Log.e("what_where" + one + " " + two + " " + three + " " + four + " "
+				+ five + " " + six + ", " + guess_one + " " + guess_two + " "
+				+ guess_three + " " + guess_four + " " + guess_five + " "
+				+ guess_six, null, null);
 
 		// ----------------------------------------------------------------------------
 		// - DIALOG BUILDING -
@@ -255,14 +249,15 @@ public class check extends Activity {
 		}
 
 		// checking for victory
-		if 
-		(guess.c1 == GuessStatus.V && guess.c2 == GuessStatus.V && guess.c3 == GuessStatus.V && guess.c4 == GuessStatus.V) {
+		if (guess.c1 == GuessStatus.V && guess.c2 == GuessStatus.V
+				&& guess.c3 == GuessStatus.V && guess.c4 == GuessStatus.V) {
 			Level_select.level1Score++;
 
 			// Is the virgin medal applicable here?
 			String Virgin_medal = "";
 			if (Medals.medal_counter1 == 0) {
-				Virgin_medal = "				" + " " + getString(R.string.medal_virgin) + ", ";
+				Virgin_medal = "				" + " " + getString(R.string.medal_virgin)
+						+ ", ";
 
 				Medals.medal1 = true;
 				Medals.medal_counter1++;
@@ -270,14 +265,17 @@ public class check extends Activity {
 
 			// Is the quick grip medal applicable here?
 			String Quick_grip_medal = "";
-			if (turn_counter == 5 || turn_counter < 5 && Medals.medal_counter2 == 0) {
-				Quick_grip_medal = " " + getString(R.string.medal_quick_grip) + ", ";
+			if (turn_counter == 5 || turn_counter < 5
+					&& Medals.medal_counter2 == 0) {
+				Quick_grip_medal = " " + getString(R.string.medal_quick_grip)
+						+ ", ";
 
 				Medals.medal2 = true;
 				Medals.medal_counter2++;
 			}
 
-			victory.setMessage("you won my game! " + Virgin_medal + Quick_grip_medal);
+			victory.setMessage("you won my game! " + Virgin_medal
+					+ Quick_grip_medal);
 
 			text1.setText(Arrays.toString(intArray));
 			victory.show();
@@ -298,31 +296,34 @@ public class check extends Activity {
 
 		} else {
 			text1.setText(Arrays.toString(intArray));
-			
+
 		}
-		
+
 		updateList();
 	}
 
 	public GuessStatus[] updateList() {
-		//LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		// LayoutInflater inflater = (LayoutInflater)
+		// getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-		/*for (Guess g : guess_list) {
+		/*
+		 * for (Guess g : guess_list) {
+		 * 
+		 * View stub = inflater.inflate(R.layout.guess_stub, null);
+		 * 
+		 * ((TextView) stub.findViewById(R.id.guess)).setText(g.v1 + ", " + g.v2
+		 * + ", " + g.v3 + "," + g.v4); ((TextView)
+		 * stub.findViewById(R.id.guess_positions)).setText(g.c1 + "," + g.c2 +
+		 * "," + g.c3 + "," + g.c4.toString()); ((ViewGroup)
+		 * findViewById(R.id.scroll_layout)).addView(stub); }
+		 */
 
-			View stub = inflater.inflate(R.layout.guess_stub, null);
-
-			((TextView) stub.findViewById(R.id.guess)).setText(g.v1 + ", " + g.v2 + ", " + g.v3 + "," + g.v4);
-			((TextView) stub.findViewById(R.id.guess_positions)).setText(g.c1 + "," + g.c2 + "," + g.c3 + "," + g.c4.toString());
-			((ViewGroup) findViewById(R.id.scroll_layout)).addView(stub);
-		}*/
-		
 		GuessStatus[] arrayResults = { guess.c1, guess.c2, guess.c3, guess.c4 };
-		
-		return 	arrayResults;
+
+		return arrayResults;
 	}
-	
-	public int[] getResults()
-	{
+
+	public int[] getResults() {
 		return results_list;
 	}
 }

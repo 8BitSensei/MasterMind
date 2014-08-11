@@ -58,7 +58,7 @@ public class code extends Activity {
 		five = (Button) findViewById(R.id.button5);
 		six = (Button) findViewById(R.id.button6);
 		check_button = (Button) findViewById(R.id.button7);
-		home = (Button) findViewById(R.id.buttonHome);
+	//	home = (Button) findViewById(R.id.buttonHome);
 
 		text1 = (TextView) findViewById(R.id.textView1);
 		text2 = (TextView) findViewById(R.id.textView2);
@@ -218,7 +218,7 @@ public class code extends Activity {
 				checkOne.getResults();
 				
 
-				 check originOne = new check(savedInstanceState);
+				 check originOne = new check();
 				 
 				 GuessStatus[] arrayResults = originOne.updateList();
 				 

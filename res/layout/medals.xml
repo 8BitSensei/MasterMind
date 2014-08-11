@@ -1,67 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-     android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
+    android:background="#87CEFA"
     android:orientation="vertical" >
-    <ListView android:id="@+id/list"
-        android:layout_height="0dp"
-        android:layout_width="0dp"></ListView>
-
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="0dp" >
+    </ListView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp" >
-        
     </LinearLayout>
 
-  <ScrollView  android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent" >
-
-  <RelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="280dp" >
 
-      <Button
-          android:id="@+id/medal01"
-          android:layout_width="65dp"
-          android:layout_height="80dp"
-          android:layout_alignParentLeft="true"
-          android:layout_alignParentTop="true"
-          android:background="@drawable/medal" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp" >
 
-      <TextView
-          android:id="@+id/textView2"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentLeft="true"
-          android:layout_below="@+id/medal01"
-          android:layout_marginLeft="14dp"
-          android:text="Virgin"
-          android:textColor="#ffffff" />
+            <Button
+                android:id="@+id/medal01"
+                android:layout_width="65dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/medal" />
 
-      <TextView
-          android:id="@+id/textView1"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignBaseline="@+id/textView2"
-          android:layout_alignBottom="@+id/textView2"
-          android:layout_marginLeft="15dp"
-          android:layout_toRightOf="@+id/medal01"
-          android:text="Quick grip"
-          android:textColor="#ffffff" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/medal01"
+                android:layout_marginLeft="14dp"
+                android:text="Virgin"
+                android:textColor="#ffffff" />
 
-      <Button
-          android:id="@+id/medal02"
-          android:layout_width="65dp"
-          android:layout_height="80dp"
-          android:layout_alignLeft="@+id/textView1"
-          android:layout_alignParentTop="true"
-          android:background="@drawable/medal" />
-
-    
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView2"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/medal01"
+                android:text="Quick grip"
+                android:textColor="#ffffff" />
 
-  </RelativeLayout>
-
-	</ScrollView>
+            <Button
+                android:id="@+id/medal02"
+                android:layout_width="65dp"
+                android:layout_height="80dp"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/medal" />
+        </RelativeLayout>
+    </ScrollView>
 
 </LinearLayout>
