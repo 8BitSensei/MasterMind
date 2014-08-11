@@ -140,21 +140,21 @@ public class check extends Activity {
 
 		if (Arrays.asList(home_list).contains(guess_list[0])) {
 			if (code.int1 == Level_select.value1) {
-				X1.setText("V");
+				//X1.setText("V");
 				results_list[0] = 2;
 				guess.c1 = GuessStatus.V;
 			}
 
 			else {
 
-				X1.setText("S");
+				//X1.setText("S");
 				guess.c1 = GuessStatus.S;
 				results_list[0] = 1;
 
 			}
 		} else {
 
-			X1.setText("X");
+			//X1.setText("X");
 			guess.c1 = GuessStatus.X;
 			results_list[0] = 0;
 
@@ -162,7 +162,7 @@ public class check extends Activity {
 
 		if (Arrays.asList(home_list).contains(guess_list[1])) {
 			if (code.int2 == Level_select.value2) {
-				X2.setText("V");
+				//X2.setText("V");
 
 				guess.c2 = GuessStatus.V;
 				results_list[1] = 2;
@@ -170,14 +170,14 @@ public class check extends Activity {
 
 			else {
 
-				X2.setText("S");
+				//X2.setText("S");
 				guess.c2 = GuessStatus.S;
 				results_list[1] = 1;
 
 			}
 		} else {
 
-			X2.setText("X");
+			//X2.setText("X");
 			guess.c2 = GuessStatus.X;
 			results_list[1] = 0;
 
@@ -185,7 +185,7 @@ public class check extends Activity {
 
 		if (Arrays.asList(home_list).contains(guess_list[2])) {
 			if (code.int3 == Level_select.value3) {
-				X3.setText("V");
+				//X3.setText("V");
 
 				guess.c3 = GuessStatus.V;
 				results_list[2] = 2;
@@ -193,14 +193,14 @@ public class check extends Activity {
 
 			else {
 
-				X3.setText("S");
+				//X3.setText("S");
 				guess.c3 = GuessStatus.S;
 				results_list[2] = 1;
 
 			}
 		} else {
 
-			X3.setText("X");
+			//X3.setText("X");
 			guess.c3 = GuessStatus.X;
 			results_list[2] = 0;
 
@@ -208,7 +208,7 @@ public class check extends Activity {
 
 		if (Arrays.asList(home_list).contains(guess_list[3])) {
 			if (code.int4 == Level_select.value4) {
-				X4.setText("V");
+				//X4.setText("V");
 
 				guess.c4 = GuessStatus.V;
 				results_list[3] = 2;
@@ -216,14 +216,14 @@ public class check extends Activity {
 
 			else {
 
-				X4.setText("S");
+				//X4.setText("S");
 				guess.c4 = GuessStatus.S;
 				results_list[3] = 1;
 
 			}
 		} else {
 
-			X4.setText("X");
+			//X4.setText("X");
 			guess.c4 = GuessStatus.X;
 			results_list[3] = 0;
 
@@ -233,7 +233,7 @@ public class check extends Activity {
 		// -------------------------------------------------------------------------------------------
 
 		if (turn_counter == 7 || turn_counter > 7) {
-			test.setOnClickListener(new View.OnClickListener() {
+			/*test.setOnClickListener(new View.OnClickListener() {
 
 				@Override
 				public void onClick(View v) {
@@ -242,8 +242,8 @@ public class check extends Activity {
 					startActivity(openCode);
 
 				}
-			});
-			test.setText("loser");
+			});*/
+			//test.setText("loser");
 			Level_select.level1Score--;
 
 		}
@@ -277,11 +277,11 @@ public class check extends Activity {
 			victory.setMessage("you won my game! " + Virgin_medal
 					+ Quick_grip_medal);
 
-			text1.setText(Arrays.toString(intArray));
+			//text1.setText(Arrays.toString(intArray));
 			victory.show();
-			test.setText("Victory");
+			//test.setText("Victory");
 
-			test.setOnClickListener(new View.OnClickListener() {
+			/*test.setOnClickListener(new View.OnClickListener() {
 
 				public void onClick(View v) {
 					Intent openCode = new Intent(d, GLxmlTest.class);
@@ -292,10 +292,10 @@ public class check extends Activity {
 					startActivity(openCode);
 
 				}
-			});
+			});*/
 
 		} else {
-			text1.setText(Arrays.toString(intArray));
+			//text1.setText(Arrays.toString(intArray));
 
 		}
 

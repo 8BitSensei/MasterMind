@@ -87,7 +87,7 @@ public class GLxmlTest extends Activity {
 
 			public void onClick(View v) {
 
-				Intent openCode = new Intent(context, Medals.class);
+				Intent openCode = new Intent(context, code.class);
 				startActivity(openCode);
 				
 
