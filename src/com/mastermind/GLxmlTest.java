@@ -1,11 +1,14 @@
 package com.mastermind;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.MotionEvent;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
@@ -36,16 +39,31 @@ public class GLxmlTest extends Activity {
 		return true;
 	}*/
 
-	static MediaPlayer mediaPlayer; 	
+	static MediaPlayer mediaPlayer; 
+	
+	public ArrayList<Integer> random1;
+	public ArrayList<Integer> random2;
+	public ArrayList<Integer> random3;
+	public ArrayList<Integer> random4;
+
+	public static int value1;
+	public static int value2;
+	public static int value3;
+	public static int value4;
+	public static int value5;
+	public static int value6;
+	public static int value7;
+	public static int level1Score;
+	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cubelayout);
 		final Context context = this;
 		
 		//media play back
-		mediaPlayer = MediaPlayer.create(context, R.raw.maintheme);
+		/*mediaPlayer = MediaPlayer.create(context, R.raw.maintheme);
 		mediaPlayer.setLooping(true);
-		mediaPlayer.start();
+		mediaPlayer.start();*/
 		
 
 		final Button btn;
@@ -74,8 +92,21 @@ public class GLxmlTest extends Activity {
 		btn1.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
+				
+				Random a1 = new Random();
+				random1 = new ArrayList<Integer>();
+				check.fudge = 0;
+				for (int index = 0; index < 4; index++) {
+					random1.add(a1.nextInt(5) + 1);
+					Log.v("AA", "" + random1.get(index));
+				}
 
-				Intent openCode = new Intent(context, Level_select.class);
+				value1 = random1.get(0);
+				value2 = random1.get(1);
+				value3 = random1.get(2);
+				value4 = random1.get(3);
+
+				Intent openCode = new Intent(context, code.class);
 				startActivity(openCode);
 				
 
@@ -87,7 +118,7 @@ public class GLxmlTest extends Activity {
 
 			public void onClick(View v) {
 
-				Intent openCode = new Intent(context, code.class);
+				Intent openCode = new Intent(context, Medals.class);
 				startActivity(openCode);
 				
 
@@ -113,13 +144,13 @@ public class GLxmlTest extends Activity {
 	}
 	public void onPause(){
 		super.onPause();
-		mediaPlayer.pause();
+		//mediaPlayer.pause();
 		
 	}
 	
 	public void onResume(){
 		super.onResume();
-		mediaPlayer.start();
+	//	mediaPlayer.start();
 		
 	}
 

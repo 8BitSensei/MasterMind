@@ -45,6 +45,8 @@ public class code extends Activity {
 		setContentView(R.layout.game);
 		super.onCreate(savedInstanceState);
 
+
+		
 		MediaPlayer mediaPlayer = MediaPlayer.create(c, R.raw.laser2);
 		mediaPlayer.setLooping(false);
 		mediaPlayer.start();
@@ -212,13 +214,8 @@ public class code extends Activity {
 
 		check_button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				
-				check checkOne = new check();
-				
-				checkOne.getResults();
-				
-
-				 check originOne = new check();
+			
+				final check originOne = new check(c);
 				 
 				 GuessStatus[] arrayResults = originOne.updateList();
 				 

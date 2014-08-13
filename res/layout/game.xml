@@ -48,17 +48,6 @@
         android:background="@drawable/button_selector2" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="24dp"
-        android:text="0"
-        android:textColor="#ffffff" />
-
-    <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -106,5 +95,15 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/tick"
         android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_marginRight="43dp"
+        android:text="0"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>
