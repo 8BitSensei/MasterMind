@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.mastermind.Guess.GuessStatus;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -32,7 +33,12 @@ public class code extends Activity {
 	public static int int2;
 	public static int int3;
 	public static int int4;
+	int turn_counter = 0;
 	public static int database;
+	public boolean vct0 = false;
+	public boolean vct1 = false;
+	public boolean vct2 = false;
+	public boolean vct3 = false;
 
 	int[] intArray = new int[4];
 	int index = 0;
@@ -66,6 +72,22 @@ public class code extends Activity {
 		text2 = (TextView) findViewById(R.id.textView2);
 		text3 = (TextView) findViewById(R.id.textView3);
 		text4 = (TextView) findViewById(R.id.textView4);
+		
+		// ----------------------------------------------------------------------------
+		// - DIALOG BUILDING -
+		// ----------------------------------------------------------------------------
+
+		final AlertDialog victory = new AlertDialog.Builder(c).create();
+
+		victory.setMessage("Congrats, you won!");
+		victory.setTitle("You wonnnnn");
+		victory.setCanceledOnTouchOutside(true);
+
+		final AlertDialog no_turns = new AlertDialog.Builder(c).create();
+
+		no_turns.setMessage("Sorry, but you ran out of turns!");
+		no_turns.setTitle("You ran out of turns.");
+		no_turns.setCanceledOnTouchOutside(true);
 
 		one.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
@@ -214,68 +236,122 @@ public class code extends Activity {
 
 		check_button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-			
-				final check originOne = new check(c);
-				 
-				 GuessStatus[] arrayResults = originOne.updateList();
-				 
-				 if(arrayResults[0] == GuessStatus.V)
-				 {
-					 text1.setText("X"); 
-				 }
-				 if(arrayResults[0] == GuessStatus.S)
-				 {
-					 text1.setText("S");
-				 }
-				 if(arrayResults[0] == GuessStatus.X)
-				 {
-					 text1.setText("V");
-				 }
-				 
-				 if(arrayResults[1] == GuessStatus.V)
-				 {
-					 text2.setText("X");
-				 }
-				 if(arrayResults[1] == GuessStatus.S)
-				 {
-					 text2.setText("S");
-				 }
-				 if(arrayResults[1] == GuessStatus.X)
-				 {
-					 text2.setText("V");
-				 }
-				 
-				 if(arrayResults[2] == GuessStatus.V)
-				 {
-					 text3.setText("X");
-				 }
-				 if(arrayResults[2] == GuessStatus.S)
-				 {
-					 text3.setText("S");
-				 }
-				 if(arrayResults[2] == GuessStatus.X)
-				 {
-					 text3.setText("V");
-				 }
-				 
-				 if(arrayResults[3] == GuessStatus.V)
-				 {
-					 text4.setText("X");
-				 }
-				 if(arrayResults[3] == GuessStatus.S)
-				 {
-					 text4.setText("S");
-				 }
-				 if(arrayResults[3] == GuessStatus.X)
-				 {
-					 text4.setText("V");
-				 }
-
+				if (turn_counter == 7 || turn_counter > 7) {
+					Level_select.level1Score--;
+					// checking for victory
+					if (vct0 && vct1 && vct2 && vct3 == true) {
+						
+	
+						// Is the virgin medal applicable here?
+						String Virgin_medal = "";
+						if (Medals.medal_counter1 == 0) {
+							Virgin_medal = "				";
+						//+ " " + getString(R.string.medal_virgin)
+									//+ ", ";
+	
+							Medals.medal1 = true;
+							Medals.medal_counter1++;
+						}
+	
+						// Is the quick grip medal applicable here?
+						String Quick_grip_medal = "";
+						if (turn_counter == 5 || turn_counter < 5
+								&& Medals.medal_counter2 == 0) {
+							Quick_grip_medal = " ";
+							//+ getString(R.string.medal_quick_grip)
+									//+ ", ";
+	
+							Medals.medal2 = true;
+							Medals.medal_counter2++;
+						}
+	
+						victory.setMessage("you won my game! " + Virgin_medal
+								+ Quick_grip_medal);
+						
+						victory.show();
+	
+					} else {
+						//text1.setText(Arrays.toString(intArray));
+	
+					}
+				}
+				else{
+					final check originOne = new check(c);
+					turn_counter++;
+					 
+					 GuessStatus[] arrayResults = originOne.updateList();
+					 
+					 if(arrayResults[0] == GuessStatus.V)
+					 {
+						 text1.setText("X");
+						 vct0 = false;
+					 }
+					 if(arrayResults[0] == GuessStatus.S)
+					 {
+						 text1.setText("S");
+						 vct0 = false;
+					 }
+					 if(arrayResults[0] == GuessStatus.X)
+					 {
+						 text1.setText("V");
+						 vct0 = true;
+					 }
+					 
+					 if(arrayResults[1] == GuessStatus.V)
+					 {
+						 text2.setText("X");
+						 vct1 = false;
+						 
+					 }
+					 if(arrayResults[1] == GuessStatus.S)
+					 {
+						 text2.setText("S");
+						 vct1 = false;
+					 }
+					 if(arrayResults[1] == GuessStatus.X)
+					 {
+						 text2.setText("V");
+						 vct1 = true;
+					 }
+					 
+					 if(arrayResults[2] == GuessStatus.V)
+					 {
+						 text3.setText("X");
+						 vct2 = false;
+					 }
+					 if(arrayResults[2] == GuessStatus.S)
+					 {
+						 text3.setText("S");
+						 vct2 = false;
+					 }
+					 if(arrayResults[2] == GuessStatus.X)
+					 {
+						 text3.setText("V");
+						 vct2 = true;
+					 }
+					 
+					 if(arrayResults[3] == GuessStatus.V)
+					 {
+						 text4.setText("X");
+						 vct3 = false;
+					 }
+					 if(arrayResults[3] == GuessStatus.S)
+					 {
+						 text4.setText("S");
+						 vct3 = false;
+					 }
+					 if(arrayResults[3] == GuessStatus.X)
+					 {
+						 text4.setText("V");
+						 vct3 = true;
+					 }
+				}
 
 			}
 		});
 
-	
+		
+				  
 	}
 
 	@Override

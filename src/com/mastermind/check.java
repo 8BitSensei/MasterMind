@@ -74,21 +74,7 @@ public class check extends Activity{
 				+ guess_three + " " + guess_four + " " + guess_five + " "
 				+ guess_six, null, null);
 
-		// ----------------------------------------------------------------------------
-		// - DIALOG BUILDING -
-		// ----------------------------------------------------------------------------
-
-		final AlertDialog victory = new AlertDialog.Builder(d).create();
-
-		victory.setMessage("Congrats, you won!");
-		victory.setTitle("You wonnnnn");
-		victory.setCanceledOnTouchOutside(true);
-
-		final AlertDialog no_turns = new AlertDialog.Builder(d).create();
-
-		no_turns.setMessage("Sorry, but you ran out of turns!");
-		no_turns.setTitle("You ran out of turns.");
-		no_turns.setCanceledOnTouchOutside(true);
+	
 
 		// ------------------------------------------------------------------------------
 		// Cross referencing guesses with rnd numbers, making use of
