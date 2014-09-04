@@ -39,6 +39,7 @@ public class code extends Activity {
 	public boolean vct1 = false;
 	public boolean vct2 = false;
 	public boolean vct3 = false;
+	public boolean codeChecked = false;
 
 	int[] intArray = new int[4];
 	int index = 0;
@@ -91,23 +92,40 @@ public class code extends Activity {
 
 		one.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				if (index == 0) {
-					text1.setText("1");
-					intArray[index++] = 1;
-					int1 = 1;
-				} else if (index == 1) {
-					text2.setText("1");
-					intArray[index++] = 1;
-					int2 = 1;
-				} else if (index == 2) {
-					text3.setText("1");
-					intArray[index++] = 1;
-					int3 = 1;
-				} else if (index == 3) {
-					text4.setText("1");
-					intArray[index++] = 1;
-					int4 = 1;
+				if(codeChecked == true)
+				{
+					if (index == 0) {
+						text1.setText("1");
+						intArray[index++] = 1;
+						int1 = 1;
+					}
+					codeChecked = false;
+					
+					text2.setText("0");
+					text3.setText("0");
+					text4.setText("0");
 				}
+				else
+				{
+					if (index == 0) {
+						text1.setText("1");
+						intArray[index++] = 1;
+						int1 = 1;
+					} else if (index == 1) {
+						text2.setText("1");
+						intArray[index++] = 1;
+						int2 = 1;
+					} else if (index == 2) {
+						text3.setText("1");
+						intArray[index++] = 1;
+						int3 = 1;
+					} else if (index == 3) {
+						text4.setText("1");
+						intArray[index++] = 1;
+						int4 = 1;
+					}
+				}
+					
 
 			}
 
@@ -115,127 +133,218 @@ public class code extends Activity {
 
 		two.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				if (index == 0) {
-					text1.setText("2");
-					int1 = 2;
-					intArray[index++] = 2;
-				} else if (index == 1) {
-					text2.setText("2");
-					int2 = 2;
-					intArray[index++] = 2;
-				} else if (index == 2) {
-					text3.setText("2");
-					int3 = 2;
-					intArray[index++] = 2;
-				} else if (index == 3) {
-					text4.setText("2");
-					int4 = 2;
-					intArray[index++] = 2;
-
+				
+				if(codeChecked == true)
+				{
+					if (index == 0) {
+						text1.setText("2");
+						intArray[index++] = 2;
+						int1 = 2;
+					}
+					codeChecked = false;
+					
+					text2.setText("0");
+					text3.setText("0");
+					text4.setText("0");
 				}
+				else
+				{
+					if (index == 0) {
+						text1.setText("2");
+						int1 = 2;
+						intArray[index++] = 2;
+					} else if (index == 1) {
+						text2.setText("2");
+						int2 = 2;
+						intArray[index++] = 2;
+					} else if (index == 2) {
+						text3.setText("2");
+						int3 = 2;
+						intArray[index++] = 2;
+					} else if (index == 3) {
+						text4.setText("2");
+						int4 = 2;
+						intArray[index++] = 2;
+
+					}
+				}
+				
 
 			}
 		});
 
 		three.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				if (index == 0) {
-					text1.setText("3");
-					int1 = 3;
-					intArray[index++] = 3;
-				} else if (index == 1) {
-					text2.setText("3");
-					int2 = 3;
-					intArray[index++] = 3;
-				} else if (index == 2) {
-					text3.setText("3");
-					int3 = 3;
-					intArray[index++] = 3;
-				} else if (index == 3) {
-					text4.setText("3");
-					int4 = 3;
-					intArray[index++] = 3;
-
+				
+				if(codeChecked == true)
+				{
+					if (index == 0) {
+						text1.setText("3");
+						intArray[index++] = 3;
+						int1 = 3;
+					}
+					codeChecked = false;
+					
+					text2.setText("0");
+					text3.setText("0");
+					text4.setText("0");
 				}
+				else
+				{
+					if (index == 0) {
+						text1.setText("3");
+						int1 = 3;
+						intArray[index++] = 3;
+					} else if (index == 1) {
+						text2.setText("3");
+						int2 = 3;
+						intArray[index++] = 3;
+					} else if (index == 2) {
+						text3.setText("3");
+						int3 = 3;
+						intArray[index++] = 3;
+					} else if (index == 3) {
+						text4.setText("3");
+						int4 = 3;
+						intArray[index++] = 3;
+
+					}
+				}
+				
 
 			}
 		});
 
 		four.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				if (index == 0) {
-					text1.setText("4");
-					int1 = 4;
-					intArray[index++] = 4;
-				} else if (index == 1) {
-					text2.setText("4");
-					int2 = 4;
-					intArray[index++] = 4;
-				} else if (index == 2) {
-					text3.setText("4");
-					int3 = 4;
-					intArray[index++] = 4;
-				} else if (index == 3) {
-					text4.setText("4");
-					int4 = 4;
-					intArray[index++] = 4;
-
+				
+				if(codeChecked == true)
+				{
+					if (index == 0) {
+						text1.setText("4");
+						intArray[index++] = 4;
+						int1 = 4;
+					}
+					codeChecked = false;
+					
+					text2.setText("0");
+					text3.setText("0");
+					text4.setText("0");
 				}
+				else
+				{
+					if (index == 0) {
+						text1.setText("4");
+						int1 = 4;
+						intArray[index++] = 4;
+					} else if (index == 1) {
+						text2.setText("4");
+						int2 = 4;
+						intArray[index++] = 4;
+					} else if (index == 2) {
+						text3.setText("4");
+						int3 = 4;
+						intArray[index++] = 4;
+					} else if (index == 3) {
+						text4.setText("4");
+						int4 = 4;
+						intArray[index++] = 4;
+
+					}
+				}
+				
 
 			}
 		});
 
 		five.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				if (index == 0) {
-					text1.setText("5");
-					int1 = 5;
-					intArray[index++] = 5;
-				} else if (index == 1) {
-					text2.setText("5");
-					int2 = 5;
-					intArray[index++] = 5;
-				} else if (index == 2) {
-					text3.setText("5");
-					int3 = 5;
-					intArray[index++] = 5;
-				} else if (index == 3) {
-					text4.setText("5");
-					int4 = 5;
-					intArray[index++] = 5;
-
+				
+				if(codeChecked == true)
+				{
+					if (index == 0) {
+						text1.setText("5");
+						intArray[index++] = 5;
+						int1 = 5;
+					}
+					codeChecked = false;
+					
+					text2.setText("0");
+					text3.setText("0");
+					text4.setText("0");
 				}
+				else
+				{
+					if (index == 0) {
+						text1.setText("5");
+						int1 = 5;
+						intArray[index++] = 5;
+					} else if (index == 1) {
+						text2.setText("5");
+						int2 = 5;
+						intArray[index++] = 5;
+					} else if (index == 2) {
+						text3.setText("5");
+						int3 = 5;
+						intArray[index++] = 5;
+					} else if (index == 3) {
+						text4.setText("5");
+						int4 = 5;
+						intArray[index++] = 5;
+
+					}
+				}
+				
 
 			}
 		});
 
 		six.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-
-				if (index == 0) {
-					text1.setText("6");
-					int1 = 6;
-					intArray[index++] = 6;
-				} else if (index == 1) {
-					text2.setText("6");
-					int2 = 6;
-					intArray[index++] = 6;
-				} else if (index == 2) {
-					text3.setText("6");
-					int3 = 6;
-					intArray[index++] = 6;
-				} else if (index == 3) {
-					text4.setText("6");
-					int4 = 6;
-					intArray[index++] = 6;
-
+				
+				if(codeChecked == true)
+				{
+					if (index == 0) {
+						text1.setText("6");
+						intArray[index++] = 6;
+						int1 = 6;
+					}
+					codeChecked = false;
+					
+					text2.setText("0");
+					text3.setText("0");
+					text4.setText("0");
 				}
+				else
+				{
+					if (index == 0) {
+						text1.setText("6");
+						int1 = 6;
+						intArray[index++] = 6;
+					} else if (index == 1) {
+						text2.setText("6");
+						int2 = 6;
+						intArray[index++] = 6;
+					} else if (index == 2) {
+						text3.setText("6");
+						int3 = 6;
+						intArray[index++] = 6;
+					} else if (index == 3) {
+						text4.setText("6");
+						int4 = 6;
+						intArray[index++] = 6;
+
+					}
+				}
+				
 
 			}
 		});
 
 		check_button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
+				index = 0;
+				codeChecked = true;
 				if (turn_counter == 7 || turn_counter > 7) {
 					Level_select.level1Score--;
 					// checking for victory
@@ -348,10 +457,7 @@ public class code extends Activity {
 				}
 
 			}
-		});
-
-		
-				  
+		});			  
 	}
 
 	@Override
