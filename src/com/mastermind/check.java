@@ -70,7 +70,7 @@ public class check extends Activity {
 		// ------------------------------------------------------------------------------
 
 		if (Arrays.asList(home_list).contains(guess_list[0])) {
-			if (code.int1 == Level_select.value1) {
+			if (code.int1 == home_list[0]) {
 				// X1.setText("V");
 				results_list[0] = 2;
 				guess.c1 = GuessStatus.V;
@@ -92,7 +92,7 @@ public class check extends Activity {
 		}
 
 		if (Arrays.asList(home_list).contains(guess_list[1])) {
-			if (code.int2 == Level_select.value2) {
+			if (code.int2 == home_list[1]) {
 				// X2.setText("V");
 
 				guess.c2 = GuessStatus.V;
@@ -115,7 +115,7 @@ public class check extends Activity {
 		}
 
 		if (Arrays.asList(home_list).contains(guess_list[2])) {
-			if (code.int3 == Level_select.value3) {
+			if (code.int3 == home_list[2]) {
 				// X3.setText("V");
 
 				guess.c3 = GuessStatus.V;
@@ -138,7 +138,7 @@ public class check extends Activity {
 		}
 
 		if (Arrays.asList(home_list).contains(guess_list[3])) {
-			if (code.int4 == Level_select.value4) {
+			if (code.int4 == home_list[3]) {
 				// X4.setText("V");
 
 				guess.c4 = GuessStatus.V;

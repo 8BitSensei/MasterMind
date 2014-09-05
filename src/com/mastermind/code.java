@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -345,6 +346,7 @@ public class code extends Activity {
 			public void onClick(View v) {
 				index = 0;
 				codeChecked = true;
+				
 				if (turn_counter == 7 || turn_counter > 7) {
 					Level_select.level1Score--;
 					// checking for victory
@@ -389,10 +391,11 @@ public class code extends Activity {
 					turn_counter++;
 					 
 					 GuessStatus[] arrayResults = originOne.updateList();
+					// Log.e(arrayResults[0]+", "+arrayResults[1]+", "+arrayResults[2]+", "+arrayResults[3], null);
 					 
 					 if(arrayResults[0] == GuessStatus.V)
 					 {
-						 text1.setText("X");
+						 text1.setText("V");
 						 vct0 = false;
 					 }
 					 if(arrayResults[0] == GuessStatus.S)
@@ -402,13 +405,13 @@ public class code extends Activity {
 					 }
 					 if(arrayResults[0] == GuessStatus.X)
 					 {
-						 text1.setText("V");
+						 text1.setText("X");
 						 vct0 = true;
 					 }
 					 
 					 if(arrayResults[1] == GuessStatus.V)
 					 {
-						 text2.setText("X");
+						 text2.setText("V");
 						 vct1 = false;
 						 
 					 }
@@ -419,13 +422,13 @@ public class code extends Activity {
 					 }
 					 if(arrayResults[1] == GuessStatus.X)
 					 {
-						 text2.setText("V");
+						 text2.setText("X");
 						 vct1 = true;
 					 }
 					 
 					 if(arrayResults[2] == GuessStatus.V)
 					 {
-						 text3.setText("X");
+						 text3.setText("V");
 						 vct2 = false;
 					 }
 					 if(arrayResults[2] == GuessStatus.S)
@@ -435,13 +438,13 @@ public class code extends Activity {
 					 }
 					 if(arrayResults[2] == GuessStatus.X)
 					 {
-						 text3.setText("V");
+						 text3.setText("X");
 						 vct2 = true;
 					 }
 					 
 					 if(arrayResults[3] == GuessStatus.V)
 					 {
-						 text4.setText("X");
+						 text4.setText("V");
 						 vct3 = false;
 					 }
 					 if(arrayResults[3] == GuessStatus.S)
@@ -451,7 +454,7 @@ public class code extends Activity {
 					 }
 					 if(arrayResults[3] == GuessStatus.X)
 					 {
-						 text4.setText("V");
+						 text4.setText("X		 ");
 						 vct3 = true;
 					 }
 				}
