@@ -79,9 +79,9 @@ public final class R {
         public static final int title=0x7f02003a;
     }
     public static final class id {
-        public static final int btn=0x7f070004;
+        public static final int btn=0x7f070005;
         public static final int btn1=0x7f070003;
-        public static final int btn2=0x7f070005;
+        public static final int btn2=0x7f070004;
         public static final int button1=0x7f070008;
         public static final int button2=0x7f07000e;
         public static final int button3=0x7f07000d;
