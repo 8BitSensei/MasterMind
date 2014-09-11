@@ -25,16 +25,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:background="@drawable/playbutton" />
-
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/btn"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/instructionbutton" />
+            android:background="@drawable/play_button" />
 
         <Button
             android:id="@+id/btn"
@@ -43,7 +34,16 @@
             android:layout_below="@+id/btn1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="27dp"
-            android:background="@drawable/medalsbutton" />
+            android:background="@drawable/medals_button" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btn"
+            android:layout_below="@+id/btn"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/tutorial_button" />
 
     </RelativeLayout>
 

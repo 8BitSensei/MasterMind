@@ -71,21 +71,26 @@ public final class R {
         public static final int level_seven=0x7f020032;
         public static final int level_three=0x7f020033;
         public static final int medal=0x7f020034;
-        public static final int medalsbutton=0x7f020035;
-        public static final int medalwin=0x7f020036;
-        public static final int new_cog=0x7f020037;
-        public static final int playbutton=0x7f020038;
-        public static final int tick=0x7f020039;
-        public static final int title=0x7f02003a;
+        public static final int medals_button=0x7f020035;
+        public static final int medalsbutton=0x7f020036;
+        public static final int medalwin=0x7f020037;
+        public static final int new_cog=0x7f020038;
+        public static final int option_base=0x7f020039;
+        public static final int play_button=0x7f02003a;
+        public static final int playbutton=0x7f02003b;
+        public static final int tick=0x7f02003c;
+        public static final int title=0x7f02003d;
+        public static final int tutorial_base=0x7f02003e;
+        public static final int tutorial_button=0x7f02003f;
     }
     public static final class id {
-        public static final int btn=0x7f070005;
+        public static final int btn=0x7f070004;
         public static final int btn1=0x7f070003;
-        public static final int btn2=0x7f070004;
+        public static final int btn2=0x7f070005;
         public static final int button1=0x7f070008;
         public static final int button2=0x7f07000e;
         public static final int button3=0x7f07000d;
-        public static final int button4=0x7f070012;
+        public static final int button4=0x7f07000f;
         public static final int button5=0x7f07000a;
         public static final int button6=0x7f07000c;
         public static final int button7=0x7f07000b;
@@ -108,7 +113,7 @@ public final class R {
         public static final int textView1=0x7f070009;
         public static final int textView2=0x7f070010;
         public static final int textView3=0x7f070011;
-        public static final int textView4=0x7f07000f;
+        public static final int textView4=0x7f070012;
         public static final int username=0x7f070006;
     }
     public static final class layout {
