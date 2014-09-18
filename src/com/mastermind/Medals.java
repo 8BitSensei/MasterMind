@@ -43,9 +43,7 @@ public class Medals extends Activity {
 		// making preferences
 		// ----------------------------------------------------
 
-		final boolean medal_one = medal1;
-
-		boolean medal_two = medal2;
+		
 
 		// ---------------------------------------
 		// Dialogue
@@ -77,11 +75,11 @@ public class Medals extends Activity {
 		// changing medal image/dialogue info
 		// -------------------------------------------
 
-		if (medal_one == true) {
+		if (medal1 == true) {
 			medal_uno.setBackgroundResource(R.drawable.medalwin);
 
 		}
-		if (medal_two == true) {
+		if (medal2 == true) {
 			medal_quick_grip.setBackgroundResource(R.drawable.medalwin);
 
 		}
@@ -90,7 +88,7 @@ public class Medals extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				if (medal_one == true) {
+				if (medal1 == true) {
 					what_is_virgin.show();
 				} else {
 					virgin_description.show();

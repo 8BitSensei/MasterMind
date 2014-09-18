@@ -17,7 +17,7 @@ public class check extends Activity {
 	Guess guess = new Guess();
 	public static int fudge;
 
-	public static int turn_counter = 0;
+	
 
 	int one = 0;
 	int two = 0;
@@ -36,7 +36,7 @@ public class check extends Activity {
 	@TargetApi(9)
 	public check(Context d) {
 
-		turn_counter++;
+		
 
 		// updateList();
 
@@ -204,6 +204,50 @@ public class check extends Activity {
 		GuessStatus[] arrayResults = { guess.c1, guess.c2, guess.c3, guess.c4 };
 
 		return arrayResults;
+	}
+	
+	public Boolean[] gameResults(int turn_counter, boolean vct0, boolean vct1, boolean vct2, boolean vct3)
+	{
+		Boolean[] gameResults = {false,false,false,false};
+		
+		  if (turn_counter == 7 || turn_counter > 7)
+		  {
+			  Level_select.level1Score--;
+			 
+			  if (vct0 && vct1 && vct2 && vct3 == true)
+			  { 
+				  gameResults[0] = true;
+				  Level_select.level1Score++;
+				  
+				  if(Medals.medal_counter1 == 0) 
+				  {
+					  gameResults[1] = true;
+					  Medals.medal1 = true;
+					  Medals.medal_counter1++;	  
+				  }
+				
+				  if(Medals.medal_counter2 == 0) 
+				  {
+					  if (turn_counter == 5 || turn_counter < 5 && Medals.medal_counter2 == 0) 
+					  {  
+						  gameResults[3] = true;
+						  Medals.medal2 = true;
+						  Medals.medal_counter2++;
+					  }  
+				  }
+				 /*
+					  victory.setMessage("you won my game! " + Virgin_medal +
+					  Quick_grip_medal);
+					  
+					  victory.show();
+				  */
+			  } 
+			  else
+			  { 
+				  gameResults[0] = false;
+			  }
+		  }
+		return gameResults;
 	}
 
 }
