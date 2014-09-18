@@ -84,9 +84,9 @@ public final class R {
         public static final int tutorial_button=0x7f02003f;
     }
     public static final class id {
-        public static final int btn=0x7f070004;
+        public static final int btn=0x7f070005;
         public static final int btn1=0x7f070003;
-        public static final int btn2=0x7f070005;
+        public static final int btn2=0x7f070004;
         public static final int button1=0x7f070008;
         public static final int button2=0x7f07000e;
         public static final int button3=0x7f07000d;
@@ -111,9 +111,9 @@ public final class R {
         public static final int scroll_container=0x7f070013;
         public static final int text=0x7f070015;
         public static final int textView1=0x7f070009;
-        public static final int textView2=0x7f070010;
+        public static final int textView2=0x7f070012;
         public static final int textView3=0x7f070011;
-        public static final int textView4=0x7f070012;
+        public static final int textView4=0x7f070010;
         public static final int username=0x7f070006;
     }
     public static final class layout {

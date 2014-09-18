@@ -66,11 +66,25 @@
         android:textColor="#000000" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
-        android:layout_alignLeft="@+id/button2"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
+        android:textSize="48dp"
+        android:text="0"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="31dp"
         android:text="0"
         android:textColor="#ffffff"
         android:textSize="48dp" />
@@ -79,30 +93,20 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
         android:layout_alignRight="@+id/button2"
         android:text="0"
         android:textColor="#ffffff"
         android:textSize="48dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button3"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="34dp"
-        android:text="0"
-        android:textColor="#ffffff"
-        android:textSize="48dp" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignRight="@+id/button1"
+        android:layout_above="@+id/button1"
+        android:layout_marginLeft="29dp"
+        android:layout_toRightOf="@+id/button1"
         android:text="0"
         android:textColor="#ffffff"
         android:textSize="48dp" />
